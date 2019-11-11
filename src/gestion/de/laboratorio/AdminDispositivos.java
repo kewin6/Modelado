@@ -65,7 +65,8 @@ public class AdminDispositivos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(794, 454));
         setMinimumSize(new java.awt.Dimension(794, 454));
-        setPreferredSize(new java.awt.Dimension(788, 456));
+        setPreferredSize(new java.awt.Dimension(467, 467));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(102, 153, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(176, 311));
@@ -73,7 +74,7 @@ public class AdminDispositivos extends javax.swing.JFrame {
 
         MenuOpc1.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc1.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc1.setText("Dashboard");
+        MenuOpc1.setText("Inicio");
         MenuOpc1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuOpc1ActionPerformed(evt);
@@ -83,13 +84,13 @@ public class AdminDispositivos extends javax.swing.JFrame {
 
         MenuOpc2.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc2.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc2.setText("Administrador de dispositivos");
+        MenuOpc2.setText("Dispositivos");
         MenuOpc2.setEnabled(false);
         jPanel1.add(MenuOpc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 230, 160, -1));
 
         MenuOpc3.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc3.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc3.setText("Administrador de prestamos");
+        MenuOpc3.setText("Prestamo");
         MenuOpc3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuOpc3ActionPerformed(evt);
@@ -99,7 +100,7 @@ public class AdminDispositivos extends javax.swing.JFrame {
 
         MenuOpc4.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc4.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc4.setText("Administrador de usuarios");
+        MenuOpc4.setText("Usuarios");
         MenuOpc4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuOpc4ActionPerformed(evt);
@@ -109,7 +110,9 @@ public class AdminDispositivos extends javax.swing.JFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestion/de/laboratorio/assets/user_.png"))); // NOI18N
         jLabel10.setText("jLabel10");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 67, 120, 116));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 120, 116));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 450));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setAutoscrolls(true);
@@ -208,14 +211,17 @@ public class AdminDispositivos extends javax.swing.JFrame {
         });
         jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 0, 579, -1));
+        jPanel3.getAccessibleContext().setAccessibleName("");
+        jPanel3.getAccessibleContext().setAccessibleDescription("");
+
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setAlignmentX(0.5F);
-        jPanel4.setAlignmentY(0.5F);
         jPanel4.setMinimumSize(new java.awt.Dimension(0, 0));
         jPanel4.setPreferredSize(new java.awt.Dimension(559, 451));
         jPanel4.setRequestFocusEnabled(false);
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tableDispositivos1.setBackground(new java.awt.Color(102, 153, 255));
         tableDispositivos1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -227,6 +233,8 @@ public class AdminDispositivos extends javax.swing.JFrame {
                 "Nombre", "Descripción", "Código", "Marca", "Modelo", "Estado", "Acciones"
             }
         ));
+        tableDispositivos1.setGridColor(new java.awt.Color(255, 255, 255));
+        tableDispositivos1.setShowGrid(true);
         jScrollPane2.setViewportView(tableDispositivos1);
 
         jPanel4.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 148, 539, 90));
@@ -318,27 +326,7 @@ public class AdminDispositivos extends javax.swing.JFrame {
         jLabel11.setText("Sistema de inventario");
         jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 0, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-
-        jPanel3.getAccessibleContext().setAccessibleName("");
-        jPanel3.getAccessibleContext().setAccessibleDescription("");
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 0, 580, 450));
         jPanel4.getAccessibleContext().setAccessibleName("");
 
         pack();

@@ -18,6 +18,7 @@ public class AdminPrestamos extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
+        jPanel4.setVisible(false);
     }
 
     /**
@@ -47,9 +48,22 @@ public class AdminPrestamos extends javax.swing.JFrame {
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        jRadioButton8 = new javax.swing.JRadioButton();
+        jRadioButton9 = new javax.swing.JRadioButton();
+        jRadioButton10 = new javax.swing.JRadioButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(788, 459));
+        setPreferredSize(new java.awt.Dimension(790, 467));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(102, 153, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(215, 356));
@@ -57,7 +71,7 @@ public class AdminPrestamos extends javax.swing.JFrame {
 
         MenuOpc1.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc1.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc1.setText("Dashboard");
+        MenuOpc1.setText("Inicio");
         MenuOpc1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuOpc1ActionPerformed(evt);
@@ -67,23 +81,23 @@ public class AdminPrestamos extends javax.swing.JFrame {
 
         MenuOpc2.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc2.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc2.setText("Administrador de dispositivos");
+        MenuOpc2.setText("Dispositivos");
         MenuOpc2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuOpc2ActionPerformed(evt);
             }
         });
-        jPanel1.add(MenuOpc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        jPanel1.add(MenuOpc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 180, -1));
 
         MenuOpc3.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc3.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc3.setText("Administrador de prestamos");
+        MenuOpc3.setText("Prestamo");
         MenuOpc3.setEnabled(false);
         jPanel1.add(MenuOpc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 177, -1));
 
         MenuOpc4.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc4.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc4.setText("Administrador de usuarios");
+        MenuOpc4.setText("Usuarios");
         MenuOpc4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuOpc4ActionPerformed(evt);
@@ -95,9 +109,17 @@ public class AdminPrestamos extends javax.swing.JFrame {
         jLabel10.setText("jLabel10");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 120, 116));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setPreferredSize(new java.awt.Dimension(557, 456));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 500));
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel3.setPreferredSize(new java.awt.Dimension(557, 456));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setBorder(null);
+
+        tableDispositivos.setBackground(new java.awt.Color(102, 153, 255));
         tableDispositivos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -109,22 +131,35 @@ public class AdminPrestamos extends javax.swing.JFrame {
                 "Dispositivo", "Código", "Poseedor", "Cédula", "Celular", "Estado"
             }
         ));
+        tableDispositivos.setGridColor(new java.awt.Color(255, 255, 255));
+        tableDispositivos.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        tableDispositivos.setShowGrid(true);
         jScrollPane1.setViewportView(tableDispositivos);
         if (tableDispositivos.getColumnModel().getColumnCount() > 0) {
             tableDispositivos.getColumnModel().getColumn(5).setResizable(false);
         }
+
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 153, 520, 100));
 
         inputSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputSearchActionPerformed(evt);
             }
         });
+        jPanel3.add(inputSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 108, -1));
 
         jLabel1.setText("Buscar:");
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 255));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Registrar prestamo");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 119, -1, -1));
 
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("Teclados");
@@ -133,6 +168,7 @@ public class AdminPrestamos extends javax.swing.JFrame {
                 jRadioButton1ActionPerformed(evt);
             }
         });
+        jPanel3.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
         jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("Monitores");
@@ -141,6 +177,7 @@ public class AdminPrestamos extends javax.swing.JFrame {
                 jRadioButton2ActionPerformed(evt);
             }
         });
+        jPanel3.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
 
         jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setText("Mouses");
@@ -149,6 +186,7 @@ public class AdminPrestamos extends javax.swing.JFrame {
                 jRadioButton3ActionPerformed(evt);
             }
         });
+        jPanel3.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, -1, -1));
 
         jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton4.setText("Portatiles");
@@ -157,6 +195,7 @@ public class AdminPrestamos extends javax.swing.JFrame {
                 jRadioButton4ActionPerformed(evt);
             }
         });
+        jPanel3.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
 
         jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton5.setText("Videobeans");
@@ -165,78 +204,103 @@ public class AdminPrestamos extends javax.swing.JFrame {
                 jRadioButton5ActionPerformed(evt);
             }
         });
+        jPanel3.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI", 1, 24)); // NOI18N
-        jLabel9.setText("Sistema de inventario");
+        jLabel9.setText("Sistema de Prestamo");
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 0, -1, -1));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(inputSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21))))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(jRadioButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jRadioButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton5)))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(215, 215, 215))
-        );
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 567, 500));
+        jPanel3.getAccessibleContext().setAccessibleName("");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setAutoscrolls(true);
+        jPanel4.setPreferredSize(new java.awt.Dimension(559, 451));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton2.setBackground(new java.awt.Color(0, 102, 255));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Guardar");
+        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, -1, -1));
+
+        jRadioButton6.setBackground(new java.awt.Color(255, 255, 255));
+        jRadioButton6.setText("Teclados");
+        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton6ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, -1, -1));
+
+        jRadioButton7.setBackground(new java.awt.Color(255, 255, 255));
+        jRadioButton7.setText("Monitores");
+        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton7ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jRadioButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, -1, -1));
+
+        jRadioButton8.setBackground(new java.awt.Color(255, 255, 255));
+        jRadioButton8.setText("Mouses");
+        jRadioButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton8ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jRadioButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, -1, -1));
+
+        jRadioButton9.setBackground(new java.awt.Color(255, 255, 255));
+        jRadioButton9.setText("Portatiles");
+        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton9ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jRadioButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, -1, -1));
+
+        jRadioButton10.setBackground(new java.awt.Color(255, 255, 255));
+        jRadioButton10.setText("Videobeans");
+        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton10ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jRadioButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Yu Gothic UI", 1, 24)); // NOI18N
+        jLabel11.setText("INGRESO DE PRESTAMO");
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("*Tipo:");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+
+        jButton3.setBackground(new java.awt.Color(0, 102, 255));
+        jButton3.setText("jButton3");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        jPanel4.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 100));
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 579, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -286,6 +350,36 @@ public class AdminPrestamos extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_MenuOpc4ActionPerformed
 
+    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton6ActionPerformed
+
+    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton7ActionPerformed
+
+    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton8ActionPerformed
+
+    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton9ActionPerformed
+
+    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton10ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        jPanel3.setVisible(true);
+        jPanel4.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      jPanel4.setVisible(true);
+      jPanel3.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -331,17 +425,29 @@ public class AdminPrestamos extends javax.swing.JFrame {
     private javax.swing.JButton MenuOpc4;
     private javax.swing.JTextField inputSearch;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton10;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton jRadioButton7;
+    private javax.swing.JRadioButton jRadioButton8;
+    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTable tableDispositivos;
     // End of variables declaration//GEN-END:variables
 }

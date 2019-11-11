@@ -52,6 +52,7 @@ public class vista extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(102, 153, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(215, 356));
@@ -59,47 +60,47 @@ public class vista extends javax.swing.JFrame {
 
         MenuOpc1.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc1.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc1.setText("Dashboard");
+        MenuOpc1.setText("Inicio");
         MenuOpc1.setEnabled(false);
-        jPanel1.add(MenuOpc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 201, 168, -1));
+        jPanel1.add(MenuOpc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 168, -1));
 
         MenuOpc2.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc2.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc2.setText("Administrador de dispositivos");
+        MenuOpc2.setText("Dispositivos");
         MenuOpc2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuOpc2ActionPerformed(evt);
             }
         });
-        jPanel1.add(MenuOpc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 230, 168, -1));
+        jPanel1.add(MenuOpc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 168, -1));
 
         MenuOpc3.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc3.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc3.setText("Administrador de prestamos");
+        MenuOpc3.setText("Prestamo");
         MenuOpc3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuOpc3ActionPerformed(evt);
             }
         });
-        jPanel1.add(MenuOpc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 259, 168, -1));
+        jPanel1.add(MenuOpc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 168, -1));
 
         MenuOpc4.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc4.setForeground(new java.awt.Color(255, 255, 255));
-        MenuOpc4.setText("Administrador de usuarios");
+        MenuOpc4.setText("Usuarios");
         MenuOpc4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuOpc4ActionPerformed(evt);
             }
         });
-        jPanel1.add(MenuOpc4, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 288, 168, -1));
+        jPanel1.add(MenuOpc4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 168, -1));
 
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestion/de/laboratorio/assets/user_.png"))); // NOI18N
         jLabel10.setText("jLabel10");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 120, 116));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 120, 116));
 
-        MenuOpc5.setBackground(new java.awt.Color(0, 102, 255));
+        MenuOpc5.setBackground(new java.awt.Color(255, 0, 0));
         MenuOpc5.setForeground(new java.awt.Color(255, 255, 255));
         MenuOpc5.setText("Salir");
         MenuOpc5.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +108,9 @@ public class vista extends javax.swing.JFrame {
                 MenuOpc5ActionPerformed(evt);
             }
         });
-        jPanel1.add(MenuOpc5, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 322, 168, -1));
+        jPanel1.add(MenuOpc5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 168, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 467));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setMinimumSize(new java.awt.Dimension(0, 0));
@@ -258,23 +261,11 @@ public class vista extends javax.swing.JFrame {
         jPanel3.add(boxHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 123, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI", 1, 24)); // NOI18N
-        jLabel9.setText("Sistema de inventario");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 0, -1, -1));
+        jLabel9.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel9.setText("INICIO");
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 549, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 467, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 0, 557, 467));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
