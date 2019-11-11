@@ -10,10 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author kewin
- */
+
 public class Conecxion {
     Connection con;
     public Conecxion(){
