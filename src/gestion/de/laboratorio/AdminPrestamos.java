@@ -49,8 +49,11 @@ public class AdminPrestamos extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(788, 459));
 
         jPanel1.setBackground(new java.awt.Color(102, 153, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(215, 356));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         MenuOpc1.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc1.setForeground(new java.awt.Color(255, 255, 255));
@@ -60,6 +63,7 @@ public class AdminPrestamos extends javax.swing.JFrame {
                 MenuOpc1ActionPerformed(evt);
             }
         });
+        jPanel1.add(MenuOpc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 177, -1));
 
         MenuOpc2.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc2.setForeground(new java.awt.Color(255, 255, 255));
@@ -69,11 +73,13 @@ public class AdminPrestamos extends javax.swing.JFrame {
                 MenuOpc2ActionPerformed(evt);
             }
         });
+        jPanel1.add(MenuOpc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
         MenuOpc3.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc3.setForeground(new java.awt.Color(255, 255, 255));
         MenuOpc3.setText("Administrador de prestamos");
         MenuOpc3.setEnabled(false);
+        jPanel1.add(MenuOpc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 177, -1));
 
         MenuOpc4.setBackground(new java.awt.Color(0, 102, 255));
         MenuOpc4.setForeground(new java.awt.Color(255, 255, 255));
@@ -83,44 +89,14 @@ public class AdminPrestamos extends javax.swing.JFrame {
                 MenuOpc4ActionPerformed(evt);
             }
         });
+        jPanel1.add(MenuOpc4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 177, -1));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestion/de/laboratorio/assets/user_.png"))); // NOI18N
         jLabel10.setText("jLabel10");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(MenuOpc1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MenuOpc2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MenuOpc3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MenuOpc4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(19, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(MenuOpc1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MenuOpc2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MenuOpc3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MenuOpc4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 120, 116));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setPreferredSize(new java.awt.Dimension(557, 456));
 
         tableDispositivos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -130,10 +106,13 @@ public class AdminPrestamos extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Dispositivo", "Código", "Poseedor", "Cédula", "Celular", "Acciones"
+                "Dispositivo", "Código", "Poseedor", "Cédula", "Celular", "Estado"
             }
         ));
         jScrollPane1.setViewportView(tableDispositivos);
+        if (tableDispositivos.getColumnModel().getColumnCount() > 0) {
+            tableDispositivos.getColumnModel().getColumn(5).setResizable(false);
+        }
 
         inputSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,7 +177,7 @@ public class AdminPrestamos extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jButton1)
@@ -227,7 +206,7 @@ public class AdminPrestamos extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton1)
                     .addComponent(jRadioButton2)
@@ -251,11 +230,11 @@ public class AdminPrestamos extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
